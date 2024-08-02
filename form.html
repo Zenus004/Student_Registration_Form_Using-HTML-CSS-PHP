@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+    body {
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+    background-image: url('9.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #bad24d;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #38763b;
+}
+
+.gender-residential {
+    text-align: center;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-links ul {
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #1a1919;
+}
+
+.footer-links a:hover {
+    color: #2b59bd;
+}
+    </style>
+</head>
+
+<body>
+
+    <h2>
+        <center>Student Registration Form</center>
+    </h2>
+    <form id="student-form" action="form.php" method="POST">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <div class="gender-residential">
+            <label>Gender:</label>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
+            <label><input type="radio" name="gender" value="other" required> Other</label>
+        </div>
+
+        <br>
+
+        <div class="gender-residential">
+            <label>Residential Type:</label>
+            <label><input type="checkbox" name="residential-type[]" value="day-scholar"> Day Scholar</label>
+            <label><input type="checkbox" name="residential-type[]" value="hosteller"> Hosteller</label>
+        </div>
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+            <option value="Select">Select</option>
+            <option value="computer-science">Computer Science</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Mechanical">Mechanical</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="footer-links">
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="service.html">Our Services</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
